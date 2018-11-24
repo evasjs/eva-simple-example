@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "eva-simple-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eason",
+  "license": "MIT",
+  "scripts": {
+    "start": "pm2 start conf/config.yml",
+    "restart": "pm2 restart conf/config.yml"
+  },
+  "dependencies": {
+    "cors": "^2.8.1",
+    "eva-server": "^0.0.32",
+    "eva-server-plugin-create-plugin": "^1.1.6",
+    "eva-server-plugin-user": "^1.0.5",
+    "http-proxy-middleware": "^0.17.4",
+    "raven": "^2.4.1"
+  },
+  "devDependencies": {
+    "pm2": "^2.6.1"
+  }
+}

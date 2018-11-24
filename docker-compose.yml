@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  web:
+    # restart: unless-stopped
+    # build: .
+    image: whatwewant/eva
+    environment:
+      DB_HOST: mongo
+      JWT_KEY: "HEY_GUY_YOUR_SHOULD_DEFINED_JWT_SECRET_KEY"
+      JWT_EXPIRES_IN: "180 days"
+    ports:
+      - 59438:80
+    links:
+      - mongo
+    volumes:
+      - ./logs:/web/logs
+    #  - ./logs/.app.log:/web/.app.log
+    #  - ./logs/.error.log:/web/.error.log
+
+  mongo:
+    image: mongo:3.2.8
+    volumes:
+      - ./data/db:/data/db

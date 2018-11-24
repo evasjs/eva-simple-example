@@ -1,0 +1,6 @@
+*.log
+backup/
+node_modules/
+data/
+demo.js
+.DS_Store

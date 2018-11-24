@@ -1,0 +1,13 @@
+apps:
+  - name      : git_app
+    script    : app.js
+    instances : 4
+    env       :
+      ACCESS_LOGFILE: logs/.access.log
+      ERROR_LOGFILE: logs/.error.log
+      NODE_ENV: production
+      # PORT    : 59438
+      PORT    : 80
+      # HOST    : "127.0.0.1"
+      HOST    : "0.0.0.0"
+    exec_mode : cluster
